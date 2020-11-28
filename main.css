@@ -1,0 +1,47 @@
+*{padding: 0
+margin:0;
+box-sizing: border-box;}
+body{font-size: 25px;
+font-family: mali;
+background-color:#f9d5bb}
+p{color:#3c3d47;}
+h1{font-size: 50px;
+color:#ea9abb;}
+h2{font-size: 50px;
+color:#ea9abb;}
+div{width:60%;
+margin:auto;
+padding:30px;
+box-shadow: 0 0 10PX 1PX rgba(0,0,0,0.2);
+display: block; }
+
+
+.jpg3{width: 270px;
+height: 200px;
+display: block;}
+.jpg4{width:270px;
+height:200px;
+}
+.jpg5{width: 270px;
+height: 200px;
+}
+.jpg6{width: 270px;
+height:200px; 	
+}
+.jpg7{width: 270px;
+height:200px; 	
+}
+a{text-decoration: none;
+color:#cd6684;
+font-size: 20px;
+display:inline-block ;
+margin:20px 0;
+border-bottom: 1px solid transparent;
+transition: 0,7s ease-in;
+border-radius: 50%;
+transform: rotate(3deg);  }
+a: hover{
+	border-bottom-color: #ea9abb
+	transform:rotate(180deg);
+
+}

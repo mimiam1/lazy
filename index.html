@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<meta charset="UTF-8">
+	<title>Отстань.нитиво нинаю.тьфу</title>
+</head>
+<body>
+	<div id="box">
+		<h1>Браслетики</h1>
+		<p>Первоначально компания была основана как небольшой ювелирный магазин в Копенгагене.
+
+			В 1987 году Pandora перешла на оптовые продажи ввиду выросшего спроса на продукцию.В ювелирной компании трудится более 21 тыс. человек. За свою историю компания покорила ювелирные рынки более чем 70 стран, и сегодня украшения бренда успешно продаются на шести континентах.
+
+			Пандора производит различные ювелирные изделия, такие как серьги, кольца, браслеты, колье, а также часы.В 1987 году Pandora перешла на оптовые продажи ввиду выросшего спроса на продукцию.
+
+			В 1989 году производство было перемещено в Таиланд, что дало возможность производить массовую ювелирную продукцию. Компания была продана через IPO 5 октября 2010 года.
+
+			В 2014 году открылся 1000-й магазин и этот год стал новой вехой в истории компании.
+
+			В 2015 году Pandora приходит в Казахстан.
+
+			В 2016 году доход компании составил около 3-х млрд долларов.
+
+		7 февраля 2017 года Pandora инициировала программу выкупа акций, так называемый обратный выкуп акций, за год компания выкупит более миллиона акции на сумму примерно $270 млн.</p>
+		<img class="jpg3" src="3 (2).jpg" data-src="3.jpg">
+		<h2> Что же тут есть?</h2>
+		<p>Вот некоторые примеры: </p>
+		<img class="jpg4" src="4 (2).jpg" data-src="4.jpg">
+		<img class="jpg5" src="5 (2).jpg" data-src="5.jpg">
+		<img class="jpg6" src="6 (2).jpg" data-src="6.jpg">
+		<img class="jpg7" src="7 (2).jpg" data-src="7.jpg">
+		<a href="https://pandorarussia.ru/?utm_source=google&utm_medium=cpc&utm_campaign=cn:rta_g_brand_main_sem_rus|8693645038&utm_term=%D0%BF%D0%B0%D0%BD%D0%B4%D0%BE%D1%80%D0%B0&utm_content=ch_google_ads|trg_kwd-40062923892|crt_407820134148|kwmt_e|ps_1t1|srct_g|trgt_|src_|devt_c|devm_|cid_8693645038|lcl_1012084|fdi_&gclid=EAIaIQobChMI4p6F8MDE5wIVRIuyCh0aIgO-EAAYASAAEgIpkPD_BwE">"Официальный сайт Pandora | Оригинальный дизайн‎"</a>
+
+
+	</div>
+
+	
+</body>
+<script>
+	let counter = 0;
+	const getPars = function(element) {
+		console.log(element, element.getBoundingClientRect());
+		console.log('window.innerHeight: ',window.innerHeight);
+	}
+	const visible = function(element){
+		return element.getBoundingClientRect().top < (window.innerHeight - 150)
+	}
+	const lazyload = function(){
+		counter ++
+		console.log('прокрутка.счетчик:', counter);
+		let imgs = document.querySelectorAll('img');
+		for (let i = 0; i < imgs.length; i++) {
+			if (visible(imgs[i])){
+				let path = imgs[i].getAttribute('data-src');
+				console.log(path);
+				imgs[i].setAttribute('src',path)
+			};
+		};
+	};
+
+
+	document.addEventListener('DOMContentLoaded', function (){
+
+		document.addEventListener('scroll',lazyload)
+	});
+
+</script>
+</html>
